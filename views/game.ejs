@@ -1,0 +1,344 @@
+<!doctype html>
+<html>
+<head>
+
+</head>
+<body>
+    <%- include('header') %>
+
+    <div class="container">
+        <div class="dialog">
+            <div class="welcome">
+                <h3>Hello!</h3>
+                    <p>Welcome to the extra credit game.</p>
+
+                <p>Please click the next button below so we can get some information first.</p>
+            </div>
+
+            <div class="question genderQuestion">
+                <p>Question 1/13:</p>
+                <p>Please select your gender:</p>
+                <input type='radio' name='genderAnswer' id='male' value="male">
+                    <label for="male">Male</label><br>
+                <input type='radio' name='genderAnswer' id='female' value="female">
+                    <label for="female">Female</label>
+            </div>
+
+            <div class="question partyQuestion">
+                <p>Question 2/13:</p>
+                <p>Do you consider yourself to be a:</p>
+                <input type='radio' name='partyAnswer' id='democrat' value="democrat">
+                    <label for="democrat">Democrat</label><br>
+                <input type='radio' name='partyAnswer' id='republican' value="republican">
+                    <label for="republican">Republican</label><br>
+                <input type='radio' name='partyAnswer' id='independent' value="independent">
+                    <label for="independent">Independent</label><br>
+                <input type='radio' name='partyAnswer' id='otherparty' value="other">
+                    <label for="otherparty">None of the Above</label>
+            </div>
+
+            <div class="question raceQuestion">
+                <p>Question 3/13:</p>
+                <p>Do you consider yourself to be:</p>
+                <input type='radio' name='raceAnswer' id='white' value="white">
+                    <label for='white'>White</label><br>
+                <input type='radio' name='raceAnswer' id='black' value="black">
+                    <label for='black'>Black</label><br>
+                <input type='radio' name='raceAnswer' id='hispanic' value="hispanic">
+                    <label for="hispanic">Hispanic</label><br>
+                <input type='radio' name='raceAnswer' id='asian' value="asian">
+                    <label for="asian">Asian</label><br>
+                <input type='radio' name='raceAnswer' id='otherRace' value="other">
+                    <label for="otherRace">Other</label>
+            </div>
+
+            <div class="question incomeQuestion">
+                <p>Question 4/13:</p>
+                <p>What is you annual pre-tax income?</p>
+                <input type='radio' name='incomeAnswer' id='under15k' value="<15">
+                    <label for="under15k"><$15,000</label><br>
+                <input type='radio' name='incomeAnswer' id='15-20' value="15-20">
+                    <label for='15-20'>$15,001 - $20,000</label><br>
+                <input type='radio' name='incomeAnswer' id='20-30' value="20-30">
+                    <label for="20-30">$20,001 - $30,000</label><br>
+                <input type='radio' name='incomeAnswer' id='30-40' value="30-40">
+                    <label for="30-40">$30,001 - $40,000</label><br>
+                <input type='radio' name='incomeAnswer' id='40-60' value="40-60">
+                    <label for="40-60">$40,001 - $60,000</label><br>
+                <input type='radio' name='incomeAnswer' id='60-75' value="60-75">
+                    <label for="60-75">$60,001 - $75,000</label><br>
+                <input type='radio' name='incomeAnswer' id='75-100' value="75-100">
+                    <label for="75-100">$75,001 - $100,000</label><br>
+                <input type='radio' name='incomeAnswer' id='100-150' value="100-150">
+                    <label for="100-150">$100,001 - $150,000</label><br>
+                <input type='radio' name='incomeAnswer' id='over150k' value=">150">
+                    <label for="over150k">$150,000</label>
+            </div>
+
+            <div class="question stateQuestion">
+                <p>Question 5/13:</p>
+                What state do you live in?
+                <select class="stateAnswer">
+                    <option value="blank">-----</option>
+                    <option value="Alabama">Alabama</option>
+                    <option value="Alaska">Alaska</option>
+                    <option value="Arizona">Arizona</option>
+                    <option value="Arkansas">Arkansas</option>
+                    <option value="California">California</option>
+                    <option value="Colorado">Colorado</option>
+                    <option value="Connecticut">Connecticut</option>
+                    <option value="Delaware">Delaware</option>
+                    <option value="Florida">Florida</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="Idaho">Idaho</option>
+                    <option value="Illinois">Illinois</option>
+                    <option value="Indiana">Indiana</option>
+                    <option value="Iowa">Iowa</option>
+                    <option value="Kansas">Kansas</option>
+                    <option value="Kentucky">Kentucky</option>
+                    <option value="Louisiana">Louisiana</option>
+                    <option value="Maine">Maine</option>
+                    <option value="Maryland">Maryland</option>
+                    <option value="Massachusetts">Massachusetts</option>
+                    <option value="Michigan">Michigan</option>
+                    <option value="Minnesota">Minnesota</option>
+                    <option value="Mississippi">Mississippi</option>
+                    <option value="Missouri">Missouri</option>
+                    <option value="Montana">Montana</option>
+                    <option value="Nebraska">Nebraska</option>
+                    <option value="Nevada">Nevada</option>
+                    <option value="New_Hampshire">New Hampshire</option>
+                    <option value="New_Jersey">New Jersey</option>
+                    <option value="New_Mexico">New Mexico</option>
+                    <option value="New_York">New York</option>
+                    <option value="North_Carolina">North Carolina</option>
+                    <option value="North_Dakota">North Dakota</option>
+                    <option value="Ohio">Ohio</option>
+                    <option value="Oklahoma">Oklahoma</option>
+                    <option value="Oregon">Oregon</option>
+                    <option value="Pennsylvania">Pennsylvania</option>
+                    <option value="Rhode_Island">Rhode Island</option>
+                    <option value="South_Carolina">South Carolina</option>
+                    <option value="South_Dakota">South Dakota</option>
+                    <option value="Tennessee">Tennessee</option>
+                    <option value="Texas">Texas</option>
+                    <option value="Utah">Utah</option>
+                    <option value="Vermont">Vermont</option>
+                    <option value="Virginia">Virginia</option>
+                    <option value="Washington">Washington</option>
+                    <option value="West_Virginia">West Virginia</option>
+                    <option value="Wisconsin">Wisconsin</option>
+                    <option value="Wyoming">Wyoming</option>
+                </select>
+            </div>
+
+            <div class="question riskQuestion">
+                <p>Question 6/13:</p>
+                <p>In general, people often face risks when making financial, career, or other life decisions. Overall,
+                how would you place yourself on the following scale?</p>
+                <input type="radio" name="riskAnswer" id='riskEC' value="extremely_comfortable">
+                    <label for="riskEC">Extremely comfortable taking risks</label><br>
+                <input type="radio" name="riskAnswer" id="riskC" value="comfortable">
+                    <label for="riskC">Comfortable taking risks</label><br>
+                <input type="radio" name="riskAnswer" id="riskSC" value="somewhat_comfortable">
+                    <label for="riskSC">Somewhat comfortable taking risks</label><br>
+                <input type="radio" name="riskAnswer" id="riskN" value="neither">
+                    <label for="riskN">Neither comfortable nor uncomfortable taking risks</label><br>
+                <input type="radio" name="riskAnswer" id="riskSU" value="somewhat_uncomfortable">
+                    <label for="riskSU">Somewhat uncomfortable taking risks</label><br>
+                <input type="radio" name="riskAnswer" id="riskU" value="uncomfortable">
+                    <label for="riskU">Uncomfortable taking risks</label><br>
+                <input type="radio" name="riskAnswer" id="riskEU" value="extremely_uncomfortable">
+                    <label for="riskEU">Extremely uncomfortable taking risks</label>
+            </div>
+
+            <div class="question economyQuestion">
+                <p>Question 7/13:</p>
+                <p>Do you expect the national economy to get better, worse, or stay about the same over the next year?</p>
+                <input type="radio" name="economyAnswer" id="econBetter" value="get_better">
+                    <label for="econBetter">Get Better</label><br>
+                <input type="radio" name="economyAnswer" id="econSame" value="stay_same">
+                    <label for="econSame">Stay the Same</label><br>
+                <input type="radio" name="economyAnswer" id="econWorse" value="get_worse">
+                    <label for="econWorse">Get Worse</label><br>
+                <input type="radio" name="economyAnswer" id="econDunno" value="dunno">
+                    <label for="econDunno">Don't Know</label>
+            </div>
+
+            <div class="question financeQuestion">
+                <p>Question 8/13:</p>
+                <p>Do you expect your personal finances to get better, worse, or stay about the same over the next year?</p>
+                <input type="radio" name="financeAnswer" id="financeBetter" value="get_better">
+                    <label for="financeBetter">Get Better</label><br>
+                <input type="radio" name="financeAnswer" id="financeSame" value="stay_same">
+                    <label for="financeSame">Stay the Same</label><br>
+                <input type="radio" name="financeAnswer" id="financeWorse" value="get_worse">
+                    <label for="financeWorse">Get Worse</label><br>
+                <input type="radio" name="financeAnswer" id="financeDunno" value="dunno">
+                    <label for="financeDunno">Don't Know</label>
+            </div>
+
+            <div class="question jobQuestion">
+                <p>Question 9/13:</p>
+                <p>How often do you find yourself concerned about your future job prospects?</p>
+                <input type="radio" name="jobAnswer" id="jobOften" value="often">
+                    <label for="jobOften">Often</label><br>
+                <input type="radio" name="jobAnswer" id="jobSometimes" value="sometimes">
+                    <label for="jobSometimes">Sometimes</label><br>
+                <input type="radio" name="jobAnswer" id="jobRarely" value="rarely">
+                    <label for="jobRarely">Rarely</label><br>
+                <input type="radio" name="jobAnswer" id="jobNever" value="never">
+                    <label for="jobNever">Never</label>
+            </div>
+
+            <div class="question financeSecurityQuestion">
+                <p>Question 10/13:</p>
+                <p>How secure do you feel with your personal finances?</p>
+                <input type="radio" name="financeSecurityAnswer" id="financeVS" value="very_secure">
+                    <label for="financeVS">Very Secure</label><br>
+                <input type="radio" name="financeSecurityAnswer" id="financeS" value="secure">
+                    <label for="financeS">Secure</label><br>
+                <input type="radio" name="financeSecurityAnswer" id="financeSS" value="somewhat_secure">
+                    <label for="financeSS">Somewhat Secure</label><br>
+                <input type="radio" name="financeSecurityAnswer" id="financeN" value="neither">
+                    <label for="financeN">Neither Secure nor Insecure</label><br>
+                <input type="radio" name="financeSecurityAnswer" id="financeSI" value="somewhat_insecure">
+                    <label for="financeSI">Somewhat Insecure</label><br>
+                <input type="radio" name="financeSecurityAnswer" id="financeI" value="insecure">
+                    <label for="financeI">Insecure</label><br>
+                <input type="radio" name="financeSecurityAnswer" id="financeVI" value="very_insecure">
+                    <label for="financeVI">Very Insecure</label>
+            </div>
+
+            <div class="question lostJobQuestion">
+                <p>Question 11/13:</p>
+                <p>Do you know of a family member or friend that has recently lost a job?</p>
+                <input type="radio" name="lostJobAnswer" id="jobLossYes" value="yes">
+                    <label for="jobLossYes">Yes</label><br>
+                <input type="radio" name="lostJobAnswer" id="jobLossNo" value="no">
+                    <label for="jobLossNo">No</label>
+            </div>
+
+            <div class="question lostJobConnectionQuestion">
+                <p>How is the person who lost their job related to you?</p>
+                <input type="radio" name="lostJobConnectionAnswer" id="lJCfriend" value="friend">
+                    <label for="lJCfriend">Friend</label><br>
+                <input type="radio" name="lostJobConnectionAnswer" id="lJCsibling" value="sibling">
+                    <label for="lJCsibling">Sibling</label><br>
+                <input type="radio" name="lostJobConnectionAnswer" id="lJCparent" value="parent">
+                    <label for="lJCparent">Parent</label><br>
+                <input type="radio" name="lostJobConnectionAnswer" id="lJCspouse" value="spouse">
+                    <label for="lJCspouse">Spouse</label><br>
+                <input type="radio" name="lostJobConnectionAnswer" id="lJCother" value="other">
+                    <label for="lJCother">Other</label>
+            </div>
+
+            <div class="question welfareQuestion">
+                <p>Question 12/13</p>
+                <p>Should federal spending on welfare programs be increased, decreased, or kept about the same?</p>
+                <input type="radio" name="welfareAnswer" id="welfareI" value="increased">
+                    <label for="welfareI">Increased</label><br>
+                <input type="radio" name="welfareAnswer" id="welfareD" value="decreased">
+                    <label for="welfareD">Decreased</label><br>
+                <input type="radio" name="welfareAnswer" id="welfareSame" value="same">
+                    <label for="welfareSame">Kept About the Same</label>
+            </div>
+
+            <div class="question governmentQuestion">
+                <p>Question 13/13:</p>
+                <p>On a scale of 1 to 7, where <b>1 equals</b> "Government should see to it that individuals can find
+                    a job and maintain a good standard of living" and <b>7 equals</b> "Government should let each
+                    person get ahead on their own". How would you rate your opinion on the matter?</p>
+                <select class="governmentAnswer">
+                    <option value="blank">-----</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="99">Don't Know</option>
+                </select>
+            </div>
+
+            <div class="question questionsDone">
+                Thank you for your responses. Please select Next to start the game!
+            </div>
+
+            <div class="rules">
+                <h2>Rules of the game:</h2>
+                <p>Next, we'll be playing a game where a coin flip will determine your payoff.</p>
+                <p>You'll begin with a balance of <b><span class="payoff"></span></b> and will be making two
+                    coin flips with a 50% chance of landing on Heads or Tails.  The payoff of each coin flip
+                    will increase or decrease your balance by <b><span class="payoffChange"></span></b>, so that
+                    a winning flip will result in a balance of <b><span class="payoffWin"></span></b> while a
+                    losing flip will result in a balance of <b><span class="payoffLose"></span></b>.</p>
+
+                <p>You'll be given the option to buy insurance with your balance for each coin flip for
+                    <b><span class="insuranceAmount"></span></b> to avoid the coin flip.</p>
+            </div>
+
+            <div class="game gameBoard">
+
+                <div class="balanceDisplay">Balance: <span class="payoff"></span></div>
+                <div class="roundDisplay">Round: <span class="roundNumber"></span> of 2</div>
+
+                <div class="clearFloats"></div>
+
+                <div class="coinContainer">
+                    <img class="coin" id="coinHeads"
+                         src="https://dl.dropboxusercontent.com/u/21683655/assets/coinGame/quarterHeads.gif">
+                    <img class="coin" id="coinTails"
+                         src="https://dl.dropboxusercontent.com/u/21683655/assets/coinGame/quarterTails.gif">
+                    <img class="coin" id="coinFlip"
+                         src="https://dl.dropboxusercontent.com/u/21683655/assets/coinGame/quarterFaster.gif">
+                </div>
+                <div class="gameDialog">
+                    <div class="dialogContents">
+                        You win if the coin lands on <b>Heads</b>. Please choose to either flip the coin
+                or buy insurance.
+                    </div>
+                </div>
+
+                <div class="clearFloats"></div>
+
+                <div class="flipContainer">
+                    <div class="buttonContainer">
+                        <button class="flipButton">Flip!</button>
+                    </div>
+                    <div class="buttonDialog">
+                        Flip for a 50/50 chance of winning or losing <b><span class="payoffChange"></span></b>
+                    </div>
+                </div>
+
+                <div class="clearFloats"></div>
+
+                <div class="insuranceContainer">
+                    <div class="buttonContainer">
+                        <button class="insuranceButton">Insurance</button>
+                    </div>
+                    <div class="buttonDialog">
+                        Buy insurance to avoid the gamble for <b><span class="insuranceAmount"></span></b>
+                    </div>
+                </div>
+            </div>
+
+            <div class="finished">
+                <h2>Thanks for participating!</h2>
+                <p>Please click Next to be forwarded to a page where you can enter your student info to receive your
+                extra credit points.</p>
+
+                <p>This step is needed to ensure that no no one can link your answers to you
+                personally, but so that you still receive your extra credit points.</p>
+            </div>
+
+        </div>
+        <div class="warning"></div>
+        <button class="next">Next</button>
+    </div>
+
+    <script type="text/javascript" src="/javascripts/playGame.js"></script>
+</body>
+</html>
