@@ -217,14 +217,23 @@ function game() {
             if (!$('input[name=lostJobConnectionAnswer]:checked').val()) {
                 $('.warning').text('Please answer the current question to continue.');
             } else {
-                $('.lostJobConnectionQuestion').fadeOut(fadeDelay);
-                $('.lostJobQuestion').fadeOut(fadeDelay);
-                setTimeout(function () {
-                    $('.welfareQuestion').fadeIn(fadeDelay);
-                    questionNumber++;
-                }, fadeDelay + 100);
-                userInfo["job_loss_connection"] = $('input[name=lostJobConnectionAnswer]:checked').val();
-                $('.warning').text('');
+                var connections = '';
+                $('input[name=lostJobConnectionAnswer]:checked').each(
+                    function() { connections += ($(this).val()) + ','; }
+                );
+                if (connections.length == 0) {
+                    $('.warning').text('Please answer the current question to continue.');
+                } else {
+                    $('.lostJobConnectionQuestion').fadeOut(fadeDelay);
+                    $('.lostJobQuestion').fadeOut(fadeDelay);
+                    setTimeout(function () {
+                        $('.welfareQuestion').fadeIn(fadeDelay);
+                        questionNumber++;
+                    }, fadeDelay + 100);
+                    //need to trim the trailing comma off of the connections string
+                    userInfo["job_loss_connection"] = connections.substring(0, connections.length - 1);
+                    $('.warning').text('');
+                }
             }
         }
 
@@ -322,7 +331,7 @@ function game() {
     $('.insuranceButton').click(function () {
         score -= insuranceCost;
         userInfo['round' + round + "_flip"] = "insurance";
-        userInfo['round' + round + "_score"] = (score - insuranceCost).toString();
+        userInfo['round' + round + "_score"] = score.toString();
         $('.dialogContents').hide().text("Insurance purchased for round " + round + "........")
             .fadeIn(fadeDelay - 100);
 
