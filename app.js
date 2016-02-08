@@ -4,7 +4,15 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var fs = require('fs');
 
+var mongo = require('mongodb');
+var mongoose = require('mongoose');
+
+
+
+
+//define routes
 var routes = require('./routes/index');
 var dbpull = require('./routes/dbpull');
 var finish = require('./routes/finish');
@@ -23,6 +31,15 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//set up db connectivity
+mongoose.connect('mongodb://localhost:27017/responses');
+fs.readdirSync(__dirname + '/models').forEach(function(filename) {
+  if (~filename.indexOf('.js'))
+})
+
+
+
+//define routes
 app.use('/', routes);
 app.use('/dbpull', dbpull);
 app.use('/finish', finish);
@@ -34,7 +51,7 @@ app.use(function(req, res, next) {
   next(err);
 });
 
-// error handlers
+
 
 // development error handler
 // will print stacktrace
@@ -61,7 +78,7 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-var port = process.env.PORT || 3000;
-app.listen(3000, function() {
+var port = process.env.PORT || 8080;
+app.listen(port, function() {
   console.log("listening on port " + port);
 })
