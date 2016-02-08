@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var userInfoSchema = new Schema({
-    time_id: String,
+    time_id: { type: String, required: true, unique: true },
     startingScore: String,
     gender: String,
     party: String,
@@ -24,7 +24,8 @@ var userInfoSchema = new Schema({
     round2_score: String
 });
 
-mongoose.model('userInfo', userInfoSchema);
+var userInfo = mongoose.model('userInfo', userInfoSchema);
+module.exports = userInfo;
 
 /*  EXAMPLE DATA
  {

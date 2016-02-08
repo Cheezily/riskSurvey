@@ -6,11 +6,11 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var fs = require('fs');
 
+//set up db connectivity
 var mongo = require('mongodb');
 var mongoose = require('mongoose');
-
-
-
+var userInfo = require('./models/userInfo');
+mongoose.connect('mongodb://localhost:27017/responses');
 
 //define routes
 var routes = require('./routes/index');
@@ -31,14 +31,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//set up db connectivity
-mongoose.connect('mongodb://localhost:27017/responses');
-fs.readdirSync(__dirname + '/models').forEach(function(filename) {
-  if (~filename.indexOf('.js'))
-})
-
-
-
 //define routes
 app.use('/', routes);
 app.use('/dbpull', dbpull);
@@ -50,8 +42,6 @@ app.use(function(req, res, next) {
   err.status = 404;
   next(err);
 });
-
-
 
 // development error handler
 // will print stacktrace
@@ -74,7 +64,6 @@ app.use(function(err, req, res, next) {
     error: {}
   });
 });
-
 
 module.exports = app;
 
